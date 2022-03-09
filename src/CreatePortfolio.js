@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import {  FormGroup, Label, Input } from 'reactstrap';
+import { Link } from "react-router-dom";
+import { Button } from 'reactstrap';
 
+import './index.css'
 
 export class CreatePortfolio extends Component {  
 
   render() {
     return (
       <div style={{ marginTop: "20vh" }}>
+          <div className="header">
+            <p>This is some content in sticky footer</p>
+        </div>
           <h1
           style={{
             display: "flex",
@@ -66,7 +72,10 @@ export class CreatePortfolio extends Component {
             <option>5</option>
           </Input>
         </FormGroup>
-
+        <div className="footer">
+            <div style={{ display: 'flex', justifyContent: 'right' }}><Button>Deneme Button<Link to="/createPortfolio"></Link></Button></div>
+            
+        </div>
       </div>
     );
   }
