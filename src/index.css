@@ -17,22 +17,15 @@
     width: 100%;
   }
 
+
   .flex-container {
       display: flex; 
       justify-content: space-between;
       width: 70%;     
   }
-
-
-  .item:nth-of-type(1) {
-      align-self: center;
-  }
-  .redClose {
-    align-self:center;
-}
-
-.greenPlus{
-    align-self:center;
+  
+  .icons-align {
+    align-self:baseline;
 }
 
 .listStyle {

@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button,Label } from "reactstrap";
 import { BsArrowRight } from "react-icons/bs";
 import "./index.css";
 import { AddItem } from "./AddItem";
@@ -26,6 +26,24 @@ function PortfolioDetail() {
         <div className="header">
           <p>This is some content in sticky footer</p>
         </div>
+        <h1
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Eğitim Yöntemi Çizelge Tanımları{" "}
+        </h1>
+        <div class="flex-container">
+        <Label for="exampleSelect">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Label>
+        <Label for="exampleSelect" style={{width:'8%'}}>Aynı Gün</Label>
+        <Label for="exampleText" style={{width:'6%'}}>Gün</Label>
+        <Label for="exampleText2" style={{width:'6%'}}>Saat</Label>
+        <Label for="exampleText3" style={{width:'41%'}}>Eğitim Yönetimi</Label>
+        <Label for="exampleSelect">&nbsp;&nbsp;</Label>
+        <Label for="exampleSelect">&nbsp;&nbsp; </Label>
+          </div>
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="liste">
             {(provided) => (
