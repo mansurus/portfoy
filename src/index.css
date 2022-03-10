@@ -20,9 +20,12 @@
 
   .flex-container {
       display: flex; 
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 70%;     
   }
+    .flex-container > * {
+      padding: 0 4px;
+    }
   
   .icons-align {
     align-self:baseline;
