@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import {  FormGroup, Label, Input } from 'reactstrap';
+import {  FormGroup, Label, Input, Button} from 'reactstrap';
 import { Link } from "react-router-dom";
-import { Button } from 'reactstrap';
+import { FaBook } from 'react-icons/fa';
+import { BsCircleFill, BsArrowRight } from 'react-icons/bs';
+
 
 import './index.css'
 
@@ -36,13 +38,13 @@ export class CreatePortfolio extends Component {
           <FormGroup check>
             <Label check>
               <Input type="radio" name="radio1" />{' '}
-              Staff
+              <FaBook color="pink"/> Staff
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
               <Input type="radio" name="radio1" />{' '}
-              Customer
+              <BsCircleFill color="yellow"/> Customer
             </Label>
           </FormGroup>          
         </FormGroup>
@@ -58,8 +60,8 @@ export class CreatePortfolio extends Component {
         </FormGroup>
         
         <FormGroup style={{width:'30%'}}>
-          <Label for="exampleEmail">Proje</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          <Label for="exampleText">Proje</Label>
+          <Input type="text" name="text" id="exampleText" placeholder="text" />
         </FormGroup>
 
         <FormGroup style={{width:'30%'}} >
@@ -73,7 +75,7 @@ export class CreatePortfolio extends Component {
           </Input>
         </FormGroup>
         <div className="footer">
-            <div style={{ display: 'flex', justifyContent: 'right' }}><Button>Deneme Button<Link to="/createPortfolio"></Link></Button></div>
+            <div style={{ display: 'flex', justifyContent: 'right' }}><Link to="/PortfolioDetail"><Button>Deneme Button <BsArrowRight /></Button></Link></div>
             
         </div>
       </div>

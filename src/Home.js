@@ -12,13 +12,9 @@ export class Home extends Component
             <div style={{ marginTop: '35vh' }}>
                 <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Deneme </h1>
                 <h4 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>deneme açıklama </h4>
-                <Link to="/createPortfolio" style={{ display: 'flex', justifyContent: 'center' }}><Button color="info">Deneme Button</Button></Link>
+                <Link to="/CreatePortfolio" style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none' }}><Button>Deneme Button</Button></Link>
             </div>
         );
     }
 
-    createPortfolio()
-    {
-        window.location = "";
-    }
 }
