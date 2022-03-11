@@ -6,7 +6,22 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    display: flex; 
+    justify-content:space-between;
   }
+
+  .footer-create{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(238, 238, 238, 0.932);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex; 
+    justify-content:right;
+  }
+
 
   .header{
     padding: 1rem;
@@ -15,13 +30,19 @@
     top: 0;
     left: 0;
     width: 100%;
+    display: flex; 
+    justify-content:space-between;
   }
 
-
+  .flex-container-heading {
+    display: flex; 
+    justify-content: space-evenly;
+    width: 60%;     
+}
   .flex-container {
       display: flex; 
       justify-content: flex-start;
-      width: 70%;     
+      width: 85%;     
   }
     .flex-container > * {
       padding: 0 4px;

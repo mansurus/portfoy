@@ -11,9 +11,12 @@ export class CreatePortfolio extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: "20vh" }}>
+      <div style={{ marginTop: "15vh" }}>
+        
           <div className="header">
-            <p>This is some content in sticky footer</p>
+            <h4>Portföyünüzü oluşturun</h4>
+            <p>1/2</p>
+            <p></p>
         </div>
           <h1
           style={{
@@ -22,19 +25,19 @@ export class CreatePortfolio extends Component {
             alignItems: "center",
           }}
         >
-          Deneme ddd{" "}
+          Portföy Detayı
         </h1>
-        <h4
+        <div style={{ marginLeft: "30vh", marginTop: "5vh" }}>
+        <p
           style={{
             display: "flex",
             justifyContent: "left",
             alignItems: "left",
           }}
         >
-          Deneme Type{" "}
-        </h4>
+          Portföy Tipi
+        </p>
         <FormGroup tag="fieldset">
-          <legend>Radio Buttons</legend>
           <FormGroup check>
             <Label check>
               <Input type="radio" name="radio1" />{' '}
@@ -48,36 +51,34 @@ export class CreatePortfolio extends Component {
             </Label>
           </FormGroup>          
         </FormGroup>
-          <FormGroup style={{width:'30%'}} >
-          <Label for="exampleSelect">Bir Select</Label>
+          <FormGroup style={{width:'40%'}} >
+          <Label for="exampleSelect">Diploma / Eğitim Adı</Label>
           <Input type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option selected>Kredi Operasyonları Diploması</option>
+
           </Input>
         </FormGroup>
         
-        <FormGroup style={{width:'30%'}}>
-          <Label for="exampleText">Proje</Label>
-          <Input type="text" name="text" id="exampleText" placeholder="text" />
+        <FormGroup style={{width:'40%'}}>
+          <Label for="exampleText">Grup Adı</Label>
+          <Input type="text" name="text" id="exampleText" placeholder="text" value={"Kredi Operasyonları Diploması"} />
         </FormGroup>
-
-        <FormGroup style={{width:'30%'}} >
-          <Label for="selectx">Bir başka select</Label>
+        <FormGroup style={{width:'40%'}}>
+          <Label for="exampleText">Proje Konusu</Label>
+          <Input type="text" name="text" id="exampleText" placeholder="" />
+        </FormGroup>
+        <FormGroup style={{width:'40%'}} >
+          <Label for="selectx">Portföy Yöneticisi</Label>
           <Input type="select" name="selectBaska" id="selectx">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option value={"1"}>DİĞDEM DÖKMECİ</option>            
           </Input>
         </FormGroup>
-        <div className="footer">
-            <div style={{ display: 'flex', justifyContent: 'right' }}><Link to="/PortfolioDetail"><Button>Deneme Button <BsArrowRight /></Button></Link></div>
+        </div>
+        <div className="footer-create">
+            <div style={{ display: 'flex', justifyContent: 'right'  }}><Link to="/PortfolioDetail"><Button size="lg">Sonraki Adım <BsArrowRight /></Button></Link></div>
             
         </div>
+        
       </div>
     );
   }

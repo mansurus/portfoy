@@ -34,8 +34,7 @@ export class AddItem extends Component
 
 					<FormGroup className="item" style={{ width: '10%' }} disabled={true}>
 						<Input type="select" name="select" id="exampleSelect" disabled={true}>
-							<option>1</option>
-							<option>2</option>
+					
 						</Input>
 					</FormGroup>
 					<FormGroup className="item" style={{ width: '7%' }}>

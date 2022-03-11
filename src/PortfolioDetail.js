@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Label } from "reactstrap";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { MdOutlineClose } from 'react-icons/md';
 import "./index.css";
 import { AddItem } from "./AddItem";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
@@ -9,13 +10,22 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 const liste = [
 	{ id: "1", gun: 1, saat: 7, egitimYontemi: "Ticari Kredi Mevzuatı - Giriş", items: [] },
 	{
-		id: "2", gun: 2, saat: 4, egitimYontemi: "Def", items: [
-			{ id: "2.1", ayniGun: 1, saat: 2, egitimYontemi: "aa" },
-			{ id: "2.2", ayniGun: 1, saat: 2, egitimYontemi: "bb" },
-			{ id: "2.3", ayniGun: 1, saat: 2, egitimYontemi: "cc" }
+		id: "2", gun: 1, saat: 8.5, egitimYontemi: "Bireysel Kredi Mevzuatı ve Operasyonu / Sınıf içi", items: [
+			{ id: "2.1", ayniGun: 0, saat: 4, egitimYontemi: "Çizelge 1 - Mevzuat" },
+			{ id: "2.2", ayniGun: 0, saat: 3, egitimYontemi: "Çizelge 1 - Süreç" },
+			{ id: "2.3", ayniGun: 0, saat: 1.5, egitimYontemi: "Çizelge 1 - Tahsis" }
 		]
 	},
-	{ id: "3", gun: 3, saat: 5, egitimYontemi: "Xyz", items: [] }
+	{
+		id: "3", gun: 1, saat: 7, egitimYontemi: "Operasyonel Risk ve Verimlilik", items: [
+			{ id: "2.1", ayniGun: 0, saat: 3, egitimYontemi: "Çizelge 1" },
+			{ id: "2.2", ayniGun: 0, saat: 4, egitimYontemi: "Çizelge 2" }
+		]
+	},
+	{ id: "4", gun: 0.5, saat: 4, egitimYontemi: "Ticari Kredi Operasyon Süreci / Sınıf İçi", items: [
+			{ id: "2.1", ayniGun: 0, saat: 2, egitimYontemi: "Çizelge 1" },
+			{ id: "2.2", ayniGun: 0, saat: 2, egitimYontemi: "Çizelge 2" }
+	] }
 ];
 
 function PortfolioDetail()
@@ -72,10 +82,12 @@ function PortfolioDetail()
 	}
 
 	return (
-		<div style={{ marginTop: "20vh" }}>
-			<div className="header">
-				<p>This is some content in sticky footer</p>
-			</div>
+		<div style={{ marginTop: "15vh" }}>
+			  <div className="header">
+            <h4>Portföyünüzü oluşturun</h4>
+            <p>2/2</p>
+            <p><MdOutlineClose size='2em'/></p>
+        </div>
 			<h1
 				style={{
 					display: "flex",
@@ -83,17 +95,10 @@ function PortfolioDetail()
 					alignItems: "center",
 				}}
 			>
-				Eğitim Yöntemi Çizelge Tanımları{" "}
+				Eğitim Yöntemi Çizelge Tanımları
 			</h1>
-			<div className="flex-container">
-				<Label for="exampleSelect">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Label>
-				<Label for="exampleSelect" style={{ width: '8%' }}>Aynı Gün</Label>
-				<Label for="exampleText" style={{ width: '6%' }}>Gün</Label>
-				<Label for="exampleText2" style={{ width: '6%' }}>Saat</Label>
-				<Label for="exampleText3" style={{ width: '41%' }}>Eğitim Yönetimi</Label>
-				<Label for="exampleSelect">&nbsp;&nbsp;</Label>
-				<Label for="exampleSelect">&nbsp;&nbsp; </Label>
-			</div>
+			<div style={{ marginLeft: "20vh", marginTop: "5vh" }}>
+		
 			<DragDropContext onDragEnd={handleOnDragEnd}>
 				<Droppable droppableId="liste">
 					{(provided) => (
@@ -119,12 +124,21 @@ function PortfolioDetail()
 					)}
 				</Droppable>
 			</DragDropContext>
-
+			</div>
 			<div className="footer">
-				<div style={{ display: "flex", justifyContent: "right" }}>
+				<div>
+					<Link to="/CreatePortfolio">
+						<Button size="lg" style={{backgroundColor:"gray"}}>
+							 <BsArrowLeft />
+						</Button>
+					</Link>
+				</div>
+				<div>					
+				</div>
+				<div >
 					<Link to="/PortfolioDetail">
-						<Button>
-							Deneme Button <BsArrowRight />
+						<Button size="lg" style={{backgroundColor:"#30b36b"}}>
+							Oluştur <BsArrowRight />
 						</Button>
 					</Link>
 				</div>

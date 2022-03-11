@@ -10,9 +10,9 @@ export class Home extends Component
     {
         return (
             <div style={{ marginTop: '35vh' }}>
-                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Deneme </h1>
-                <h4 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>deneme açıklama </h4>
-                <Link to="/CreatePortfolio" style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none' }}><Button>Deneme Button</Button></Link>
+                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color:"#4196e0" }}>Portföy bulunmamaktadır! </h2>
+                <h4 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Portföy eklemek için, Portföy Oluştur butonuna tıklayarak, portföy ekleme ekranına ulaşabilirsiniz.</h4>
+                <Link to="/CreatePortfolio" style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none' }}><Button size="lg" style={{backgroundColor:"#4196e0"}}>Portföyü Oluştur</Button></Link>
             </div>
         );
     }
